@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Microservice_02.iml" filepath="$PROJECT_DIR$/.idea/Microservice_02.iml" />
       <module fileurl="file://$PROJECT_DIR$/department-service/department-service.iml" filepath="$PROJECT_DIR$/department-service/department-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/employee-service/employee-service.iml" filepath="$PROJECT_DIR$/employee-service/employee-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/limits-service/limits-service.iml" filepath="$PROJECT_DIR$/limits-service/limits-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-clould-config-server/spring-clould-config-server.iml" filepath="$PROJECT_DIR$/spring-clould-config-server/spring-clould-config-server.iml" />
     </modules>
   </component>
 </project>
