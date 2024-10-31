@@ -1,5 +1,6 @@
 package com.example.employee_service.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,15 +14,21 @@ import lombok.ToString;
 @Setter
 @ToString
 @Builder
+
+@Schema(description = "EmployeeDto Response")
 public class EmployeeDTO {
-
+    @Schema(description = "Employee Id")
     private int id;
-
+    @Schema(description = "Employee firstName")
     private String firstName;
-
+    @Schema(description = "Employee lastName")
     private String lastName;
-
+    @Schema(description = "Employee email")
     private String email;
-
-    private int idDepartments;
+    @Schema(description = "idDepartment Id")
+    private int idDepartment;
+    @Schema(description = "departmentName")
+    private String departmentName;
+    @Schema(description = "departmentCode")
+    private String departmentCode;
 }

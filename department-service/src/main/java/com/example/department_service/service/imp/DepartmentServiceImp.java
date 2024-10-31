@@ -3,6 +3,7 @@ package com.example.department_service.service.imp;
 import com.example.department_service.dto.DepartmentDTO;
 import com.example.department_service.exception.ResourceNotfound;
 import com.example.department_service.mapper.DepartmentMapper;
+import com.example.department_service.mapper.MapStructs;
 import com.example.department_service.repository.DepartmentRepository;
 import com.example.department_service.service.DepartmentService;
 import org.modelmapper.ModelMapper;
@@ -19,16 +20,19 @@ public class DepartmentServiceImp implements DepartmentService {
 
     private ModelMapper modelMapper;
 
+    private MapStructs mapStructs;
+
     @Autowired
-    public DepartmentServiceImp(DepartmentRepository departmentRepository, ModelMapper modelMapper) {
+    public DepartmentServiceImp(DepartmentRepository departmentRepository, ModelMapper modelMapper, MapStructs mapStructs) {
         this.departmentRepository = departmentRepository;
         this.modelMapper = modelMapper;
+        this.mapStructs = mapStructs;
     }
 
     @Override
     public List<DepartmentDTO> getAll() {
         return departmentRepository.findAll().stream()
-                .map(department -> DepartmentMapper.mapToDepartmentDto(department)).collect(Collectors.toList());
+                .map(department -> mapStructs.CustomEntityToDto(department)).collect(Collectors.toList());
     }
 
     @Override
