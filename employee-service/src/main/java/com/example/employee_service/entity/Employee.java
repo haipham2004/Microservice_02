@@ -33,5 +33,5 @@ public class Employee {
     private String email;
 
     @Column(name = "id_departments")
-    private int idDepartments;
+    private int idDepartment;
 }

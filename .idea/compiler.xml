@@ -7,23 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
         <module name="spring-clould-config-server" />
         <module name="department-service" />
         <module name="limits-service" />
+        <module name="eureka-server" />
         <module name="employee-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="17" />
       <module name="department-service" target="17" />
       <module name="employee-service" target="17" />
+      <module name="eureka-server" target="17" />
       <module name="limits-service" target="17" />
       <module name="spring-clould-config-server" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
       <module name="department-service" options="-parameters" />
       <module name="employee-service" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="limits-service" options="-parameters" />
       <module name="spring-clould-config-server" options="-parameters" />
     </option>
